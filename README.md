@@ -4,4 +4,4 @@
 <!-- Not always needed, but a scope helps the user understand in a short sentance like below, why this repo exists -->
 ## Scope
 
-This repository will contain JavaScript API reference documentation for IBM Cognos Analytics with classes and methods to work with dashboards.
+This repository contains JavaScript API reference documentation for IBM Cognos Analytics with classes and methods to work with dashboards.
