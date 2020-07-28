@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-livewidget/js/features/dashboard/dataSources/api/MetadataColumnAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-livewidget/js/features/dashboard/dataSources/api/MetadataColumnAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class MetadataColumnAPI
+ * @hideconstructor
+ * @classdesc implementation of the MetadataColumnAPI interface.
+ */
+define([], () => {
+	class MetadataColumnAPI {
+
+		/**
+		 * @function MetadataColumnAPI#getObjectType
+		 * @description Return the object type (e.g. 'QueryItem').
+		 * @public
+		 *
+		 * @return {String} objectType
+		 */
+		getObjectType() {}
+
+		/**
+		 * @function MetadataColumnAPI#getId
+		 * @description Return the metadata column unique indentifier.
+		 * @public
+		 *
+		 * @return {String} unique identifier
+		 */
+		getId() {}
+
+		/**
+		 * @function MetadataColumnAPI#getSourceId
+		 * @description Return the unique identifier of the metadata source.
+		 * @public
+		 *
+		 * @return {String} unique data source identifier
+		 */
+		getSourceId() {}
+
+		/**
+		 * @function MetadataColumnAPI#getLabel
+		 * @description Return the display label of the metadata column.
+		 * @public
+		 *
+		 * @return {String} display label
+		 */
+		getLabel() {}
+
+		/**
+		 * @function MetadataColumnAPI#getType
+		 * @description Return the column type (e.g. 'attribute', 'fact').
+		 * @public
+		 *
+		 * @return {String} type
+		 */
+		getType() {}
+
+		/**
+		 * @function MetadataColumnAPI#getDataType
+		 * @description Return the column data type (e.g. 'integer', 'string', etc ).
+		 * @public
+		 *
+		 * @return {String} type  - possible values: 'integer' 'decimal', 'double', 'float', 'string', 'date', 'datetime', 'time'
+		 *
+		 *
+		 */
+		getDataType() {}
+
+		/**
+		 * @function MetadataColumnAPI#getDefaultAggregation
+		 * @description Return the column default aggregation.
+		 * @public
+		 *
+		 * @return {String} defaultAggregation
+		 */
+		getDefaultAggregation() {}
+
+		/**
+		 * @function MetadataColumnAPI#getAggregationMode
+		 * @description Return the column aggregation mode.
+		 * @public
+		 *
+		 * @return {String} aggregationMode
+		 */
+		getAggregationMode() {}
+
+
+		/**
+		 * @function MetadataColumnAPI#getTaxonomy
+		 * @description Return the column taxonomy.
+		 * @public
+		 *
+		 * @return {TaxonomyAPI} taxnonomy
+		 */
+		getTaxonomy() {}
+
+
+		/**
+		 * @function MetadataColumnAPI#getDefaultSortType
+		 * @description Return the column sort type.
+		 * @public
+		 *
+		 * @return {String} sortType
+		 */
+		getDefaultSortType() {}
+
+		/**
+		 * @function MetadataColumnAPI#getFormat
+		 * @description Return the column data format setting.
+		 * @public
+		 *
+		 * @param {Object} options ignoreDefaultFormatting - Ignore any default formatting
+		 * @return {FormatSpec} formatSpec
+		 */
+		getFormat(options) {
+			void (options);
+		}
+
+		/**
+		 * @function MetadataColumnAPI#getRootMember
+		 * @description Return the rootmember id when the column is a hierarchy.
+		 * @public
+		 *
+		 * @return {String} rootMember
+		 */
+		getRootMember() {}
+
+		/**
+		 * @function MetadataColumnAPI#isFacetDefinitionEnabled
+		 * @description Determine whether the facet definition is enabled.
+		 * @public
+		 *
+		 * @return {Boolean} true if facet definition is enabled, otherwise false
+		 *
+		 */
+		isFacetDefinitionEnabled() {}
+
+		/**
+		 * @function MetadataColumnAPI#getSourceCategory
+		 * @description Returns the source category of the  column, such as 'hierarchy', or 'level', etc. For relational type of dataset, this should return as 'column'.
+		 * @public
+		 *
+		 * @return {String} sourceCategory
+		 **/
+		getSourceCategory() {}
+
+		/**
+		 * @function MetadataColumnAPI#isHierarchy
+		 * @description Determine whether the column is an OLAP hierarchy.
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is an OLAP hierarchy, otherwise false
+		 *
+		 **/
+		isHierarchy() {}
+
+		/**
+		 * @function MetadataColumnAPI#isNamedSet
+		 * @description Determine whether the column is a named set.
+		 * @public
+		 *
+		 * @return {Boolean} true if hte column is a named set, otherwise false
+		 *
+		 **/
+		isNamedSet() {}
+
+		/**
+		 * @function MetadataColumnAPI#isProperty
+		 * @description Determine whether the column is a property.
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is a property, otherwise false
+		 *
+		 **/
+		isProperty() {}
+
+		/**
+		 * @function MetadataColumnAPI#isLevel
+		 * @description Determine whether the column is a level.
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is a level, otherwise false
+		 *
+		 **/
+		isLevel() {}
+
+		/**
+		 * @function MetadataColumnAPI#isSingleRootHierarchy
+		 * @description Determine whether the column is a single root hierarchy
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is a single root hierarchy, otherwise false
+		 *
+		 **/
+		isSingleRootHierarchy() {}
+
+		/**
+		 * @function MetadataColumnAPI#getReferencedHierarchyId
+		 * @description Returns the referenced hierarchy when it exists. For example, the referenced hierarchy of a namedSet object
+		 * is the hierarchy the namedSet belongs to
+		 * @public
+		 *
+		 * @return {string} hierarchy identifier
+		 */
+		getReferencedHierarchyId() {}
+
+		/**
+		 * @function MetadataColumnAPI#isOlapColumn
+		 * @description Determine whether the column is an OLAP column
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is an OLAP column, otherwise false
+		 */
+		isOlapColumn() {}
+
+		/**
+		 * @function MetadataColumnAPI#isNumericDataType
+		 * @description Determine whether the column is a number data type (e.g. 'integer', 'decimal', etc) column
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is a number type, otherwise false
+		 */
+		isNumericDataType() {}
+
+		/**
+		 * @function MetadataColumnAPI#isDateTimeDataType
+		 * @description Determine whether the column is a data/time data type (e.g. 'date', 'time', etc) column
+		 * @public
+		 * @return {Boolean} true if the column is a date/time type, otherwise false
+		 */
+		isDateTimeDataType() {}
+
+		/**
+		 * @function MetadataColumnAPI#isFilter
+		 * @description Determine whether the column is a filter
+		 * @public
+		 * @return {Boolean} true if the column is a filter, otherwise false
+		 */
+		isFilter() {}
+
+		/**
+		 * @function MetadataColumnAPI#isEditableCalculation
+		 * @description Determine whether the column is an editable calculation
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is an editable calculation, otherwise false
+		 */
+		isEditableCalculation() {}
+
+		/**
+		 * @function MetadataColumnAPI#getTableName
+		 * @description Get the table name that this column belongs to
+		 * @public
+		 *
+		 * @return {String} tableName
+		 */
+		getTableName() {}
+
+		/**
+		 * @public
+		 * @deprecated
+		 * @function MetadataColumnAPI#getDeprecatedMetadataColumn
+		 * @description Get the legacy metadata column object
+		 * @return {Object} legacy metadata column object
+		 */
+		getDeprecatedMetadataColumn() {}
+
+		/**
+		 * @function MetadataColumnAPI#isHidden
+		 * @description Determine whether the column is hidden
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is hidden, otherwise false
+		 */
+		isHidden() {}
+
+		/**
+		 * @function MetadataColumnAPI#isMissing
+		 * @description Determine whether the column is missing
+		 * @public
+		 *
+		 * @return {Boolean} true if the column is missing, otherwise false
+		 */
+		isMissing() {}
+	}
+
+	/**
+	 * @description Enum for all supported aggregation type.
+	 * @readonly
+	 * @enum {String}
+	 * @constant
+	 * @memberOf MetadataColumnAPI
+	 */
+	MetadataColumnAPI.AGGREGATION_TYPE = {
+		none: 'none',
+		average: 'avg',
+		automatic: 'automatic',
+		calculated: 'calculated',
+		count: 'count',
+		countDistinct: 'countdistinct',
+		maximum: 'max',
+		median: 'median',
+		minimum: 'min',
+		standardDeviation: 'stddev',
+		total: 'sum',
+		variance: 'variance'
+	};
+	return MetadataColumnAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-core/js/api/CanvasAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-core/js/api/CanvasAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class CanvasAPI
+ * @hideconstructor
+ * @classdesc API class that is used to control a dashboard canvas behaviour.
+ */
+define([], () => {
+	class CanvasAPI {
+
+		/**
+		 * @description Register a canvas event handler.
+		 * @function CanvasAPI#on
+		 * @public
+		 *
+		 * @param {String} name Event name
+		 * @param {Function} name Event handler
+		 * @return Object An object that has a remove function that removes the event handler.
+		 */
+		on() {}
+
+		/**
+		 * @description Deregister a canvas event handler.
+		 * @function CanvasAPI#off
+		 * @public
+		 *
+		 * @param {String} name Event name
+		 * @param {Function} name Event handler
+		 *
+		 */
+		off() {}
+
+		/**
+		 * @function CanvasAPI#addContent
+		 * @description Add content to the canvas
+		 * @param {Object} content Content used to add a widget to the canvas
+		 * @param {String} content.containerId Container id where to add the content. If not provided, an automatic position will be decided.
+		 * @param {Number} content.position Index where to add the content. If not provided, an automatic position will be decided.
+		 * @param {Object} content.properties An object of property names &amp; values to apply to the content
+		 * @param {String} content.type Content provider type to use. Must provide a spec if not defined.
+		 * @param {Object} content.spec Layout, widget or fragment spec.
+		 * @param {TransactionToken} transactionToken
+		 * @return {Promise&lt;ContentAPI>} new content
+		 */
+		addContent() {}
+
+		/**
+		 * @function CanvasAPI#moveContent
+		 * @description move the specified contents @contentIdList to new container @containerId
+		 * @param {String} containerId
+		 * @param {*} contentIdList
+		 * @param {*} transactionToken
+		 * @return {[contentApi]} the list of contentAPIs correnponding to @contentIdList
+		 */
+		moveContent() {}
+
+		/**
+		 * Return the content that match the given id
+		 * @function CanvasAPI#getContent
+		 * @param {String} id - The ID of the content
+		 * @return {ContentAPI}
+		 */
+		getContent() {}
+
+
+		/**
+		 * Return a list of toolbar actions
+		 *
+		 * @param {String[]} idList
+		 * @return {Object[]} array of actions
+		 * @example
+		 *  {
+				name: 'group',
+				label: stringResources.get('toolbarActionGroup'),
+				icon: 'dashboard-group',
+				type: 'Button',
+				action: () => {}
+			}
+		 */
+		getContentActionList(idList) {
+			void(idList);
+		}
+
+		/**
+		 * Select the contents that match the given ids
+		 * @function CanvasAPI#selectContent
+		 * @param {String[]} idList- Array if ids to select
+		 */
+		selectContent() {}
+
+		/**
+		 * Deselect the contents that match the given ids
+		 * @function CanvasAPI#deselectContent
+		 * @param {String[]} idList- Array if ids to select
+		 */
+		deselectContent() {}
+
+		/**
+		 * Get the list of content that is selected
+		 * @function CanvasAPI#getSelectedContentList
+		 * @param {Object} selector - Optional, returns groups and widgets by default.
+		 * @param {String} selector.type - selector string
+		 * @return {ContentAPI[]} contentList  - Array of content
+		 */
+		getSelectedContentList() {}
+
+
+		/**
+		 * Remove the content with the given id
+		 * @function CanvasAPI#deleteContent
+		 * @param {String} id - The ID of the content
+		 *
+		 * @param {TransactionToken} transactionToken
+		 */
+		removeContent() {}
+
+		/**
+		 * Return a list of content that match the provided selector
+		 * @function CanvasAPI#findContent
+		 * @param {Object} selector - selector object
+		 * @param {String} selector.type - selector string
+		 * @return {ContentAPI[]} Array of contents
+		 */
+		findContent() {}
+
+		/**
+		 * @function DashboardAPI#copy
+		 * @description Copy the currently selected widget(s) on the dashboard
+		 */
+		copy() {}
+
+		/**
+		 * @function DashboardAPI#paste
+		 * @description Paste the copied widget(s) to the dashboard
+		 * @return {Promise} promise which is resolved once the widget(s) are successfully pasted
+		 */
+		paste() {}
+
+		/**
+		 * @function CanvasAPI#getPropertyLayoutList
+		 * @descrpition Returns a list of layout and properties used to render the properties UI
+		 * @return {Object[]} Array of layout and properties used to render the properties UI
+		 */
+		getPropertyLayoutList() {}
+
+		/**
+		 * @function CanvasAPI#getPropertiesNameList
+		 * @description Returns an object of property objects
+		 * @return {String[]} Array of property objects
+		 */
+		getPropertyNameList() {}
+
+		/**
+		 * @function CanvasAPI#setPropertyValue
+		 * @description Sets the value for a property
+		 * @param {String} name - The name of the property to set
+		 * @param {Object} value - The value to set
+		 * @param {TransactionToken} transactionToken
+		 */
+		setPropertyValue() {}
+
+		/**
+		 * @function CanvasAPI#getPropertyValue
+		 * @description Get the value for a property
+		 * @param {String} name - The name of the property
+		 * @return {Object} The value of the property
+		 */
+		getPropertyValue() {}
+	}
+
+	return CanvasAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

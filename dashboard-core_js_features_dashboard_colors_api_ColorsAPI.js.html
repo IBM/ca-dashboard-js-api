@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-core/js/features/dashboard/colors/api/ColorsAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-core/js/features/dashboard/colors/api/ColorsAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class ColorsAPI
+ * @hideconstructor
+ * @classdesc Internal API class that is used to get info about the dashboard's theme, palettes and colors.
+ */
+define([], () => {
+	class ColorsAPI {
+
+		/**
+		 * @function ColorsAPI#initializeColorsFeature
+		 * @description Initialize the color service with boardModel
+		 * @param {object} option.boardModel board getModel
+		 * @param {boolean} option.generateRuntimeSryles default to true
+		 * TODO: we need this initialization because the ColorsServiceFeature is registered befor boardmodel is ready
+		 * once the boardModel internal API is ready we need to revisit this call in DashboardRuntimeService and BoardLoader
+		 */
+		initializeColorsFeature() { }
+
+		/**
+		 * @function ColorsAPI#getTabColorHexValueFromModel
+		 * @description Get the current tab color HexValue from the model
+		 * @param {string} layout property name
+		 */
+		getTabColorHexValueFromModel() { }
+
+		/**
+		 * @function ColorsAPI#getColorSetId
+		 * @description Get current color set Id
+		 */
+		getColorSetId() { }
+
+		/**
+		 * @function ColorsAPI#getThemeDefinition
+		 * @description Get theme definition
+		 */
+		getThemeDefinition() { }
+
+		/**
+		 * @function ColorsAPI#getDashboardColorSet
+		 * @description Get dashboard colorSet
+		 */
+		getDashboardColorSet() { }
+
+		/**
+		 * @function ColorsAPI#getCustomColorSet
+		 * @description Get custom colorSet
+		 */
+		getCustomColorSet() { }
+
+		/**
+		 * @function ColorsAPI#getColorSet
+		 * @description Get the current colorSet of the dashboard, returns either the dashbaord color set or the custom colors
+		 * @param {string} id of the palette
+		 */
+		getColorSet() { }
+
+		/**
+		 * @function ColorsAPI#getLayoutBackgroundColorHex
+		 * @description Get the layout backgrpund color's hexVlue
+		 * @param {string} id of the background color, default to transparent if nothing set
+		 */
+		getLayoutBackgroundColorHex() { }
+
+		/**
+		 * @function ColorsAPI#getDefaultPaletteName
+		 * @description Get the default palette name for the  palette type specified, for example 'colroPalette0'
+		 * @param {string} the type of palette, currently only options are 'ColorPalette', 'HeatPalette' and 'ConditionalPalette'
+		 */
+		getDefaultPaletteName() { }
+
+		/**
+		 * @function ColorsAPI#getPropertyForUIElement
+		 * @description Get the property for the UIElement and Property ID specified, returns property if it exists, undefined otherwise
+		 * @param {string} UIElement as described in the theme
+		 * @param {string} id of the tproperty within the specified UIElement
+		 */
+		getPropertyForUIElement() { }
+
+		/**
+		 * @function ColorsAPI#getValueForPropertyOfUIElement
+		 * @description Get the property value for the UIElement and Property ID specified, returns value for the property if it exists, undefined otherwise
+		 * @param {string} UIElement as described in the theme
+		 * @param {string} id of the tproperty within the specified UIElement
+		 */
+		getValueForPropertyOfUIElement() { }
+
+		/**
+		 * @function ColorsAPI#getValueForVariable
+		 * @description Given the variable type (such as 'Color' or 'Font') and the variable ID (such as 'color1' or 'font1') return the value for the corresponding mapping
+		 * @param {string} Variable type (such as 'Color' or 'Font')
+		 * @param {string} id of a variable found within the specified variableType (such as 'color1')
+		 */
+		getValueForVariable() { }
+
+		/**
+		 * @function ColorsAPI#updateThemeMapping
+		 * @description Update the currenr theme mapping when a theme mapping is updated (a new vis type definition is provided)
+		 * @param {JSONObject} json description of which properties map to which super property
+		 * For example:
+		 *		{
+		 *			"id": "axisLineColor",
+		 *			"mapping": [
+		 *				"valAxisLineColor",
+		 *				"catAxisLineColor"
+		 *			]
+		 *		}
+		 */
+		updateThemeMapping() { }
+
+		/**
+		 * @function ColorsAPI#getMappedId
+		 * @description Get the mapped vis properties with the theme property id specified
+		 * @param {string} id of the theme property mapping
+		 */
+		getMappedId() { }
+
+		/**
+		 * @function ColorsAPI#isDashboardColorSetFromThemes
+		 * @description Return a boolean value indicate that if the current dashboard color set is from the themes
+		 */
+		isDashboardColorSetFromThemes() { }
+
+		/**
+		 * @function ColorsAPI#getForegroundCSSColors
+		 * @description Get a map of forground css colors where the key is the IDs of the color set
+		 * @param {string} the property name from the theme definitions
+		 * @param {string} id of the palette, default to current colorSet Id if nothing set
+		 */
+		getForegroundCSSColors() { }
+
+		/**
+		 * @function ColorsAPI#getForegroundColorPropertiesForUIElement
+		 * @description Get an array of id and foreground color pairs
+		 * @param {string} the background color ID to go against
+		 * @param {string} the ui element defined in the theme definition
+		 */
+		getForegroundColorPropertiesForUIElement() { }
+
+		/**
+		 * @function ColorsAPI#getForegroundPropertiesForUIElement
+		 * @description Get an array of foreground properties for a given ui element
+		 * @param {string} the ui element defined in the theme definition, default to 'visualization' if nothing set
+		 */
+		getForegroundPropertiesForUIElement() { }
+
+		/**
+		 * @function ColorsAPI#isColorIdValidForDashboadColorSet
+		 * @description Checks to see if the colorId passed in is part of the dashbaord color set.
+		 * @param {string} id of the color
+		 */
+		isColorIdValidForDashboadColorSet() { }
+
+		/**
+		 * @function ColorsAPI#getHexColorFromDashboardColorSet
+		 * @description Given a color ID, get the hex value for the currently selected dashboard color set
+		 * @param {string} id of the color
+		 */
+		getHexColorFromDashboardColorSet() { }
+
+		/**
+		 * @function ColorsAPI#getHexColorFromPalette
+		 * @description Get the hex color from a palette using either the color ID or the color index
+		 * @param {string} options.paletteId - the ID of the palette to get
+		 * @param {string} options.type - the theme variable name for the list of palettes ('ColorPalette', 'HeatPalette', 'ConditionalPalette')
+		 * @param {number} [options.colorIndex] - The index of the color to get the hex for
+		 * @param {string} [options.colorId] - The color ID of the color to get the hex for
+		 * @param {boolen} [options.defaultIfNotFound] - set to true if you want the response to default to a palette
+		 * @param {boolen} [options.addMissingBaseColors] - If true makes sure the base colors are part of the palette that we're searching through
+		 */
+		getHexColorFromPalette() { }
+
+		/**
+		 * @function ColorsAPI#getPalette
+		 * @description Get the color palette
+		 * @param {string} options.paletteId - the ID of the palette to get
+		 * @param {string} options.type - the theme variable name for the list of palettes ('ColorPalette', 'HeatPalette', 'ConditionalPalette')
+		 * @param {string} [options.defaultPaletteId] - if the palette isn't found what palette to use as the default
+		 * @param {boolen} [options.defaultIfNotFound] - set to true if you want the response to default to a palette
+		 * @param {boolen} [options.forProperties] - boolean if the response is to be used for the properties
+		 */
+		getPalette() { }
+
+		/**
+		 * @function ColorsAPI#getPalette
+		 * @description Get the color palette
+		 * @param {string} type - the theme variable name for the list of palettes ('ColorPalette', 'HeatPalette', 'ConditionalPalette')
+		 * @param {boolean} [includeUserColorPalette] - if the UserColorPalette should be included in the list of available system palettes
+		 * @param {boolen} [options.forProperties] - boolean if the response is to be used for the properties
+		 */
+		getPalettes() { }
+
+		/**
+		 * @function ColorsAPI#getPaletteColors
+		 * @description Get information about all the colors in a palette
+		 * @param {string} options.paletteId - the ID of the palette to get
+		 * @param {string} [options.type] - the theme variable name for the list of palettes ('ColorPalette', 'HeatPalette', 'ConditionalPalette')
+		 * @param {boolen} [options.addMissingBaseColors] - If true makes sure the base colors are part of the palette that we're searching through
+		 * @param {boolen} [options.defaultIfNotFound] - set to true if you want the response to default to a palette
+		 */
+		getPaletteColors() { }
+
+		/**
+		 * @function ColorsAPI#createColorDefinition
+		 * @description Create a color definition
+		 * @param {string} the id of the color
+		 * @param {string} the label of the color
+		 * @param {string} the hexValue of the color
+		 */
+		createColorDefinition() { }
+
+		/**
+		 * @function ColorsAPI#clearLocalPaletteCache
+		 * @description Clear the local palette cache
+		 */
+		clearLocalPaletteCache() { }
+
+		/**
+		 * @function ColorsAPI#destroy
+		 * @description destroy this instance
+		 */
+		destroy() { }
+
+		/**
+		 * @function ColorsAPI#enableTheme
+		 * @description Called when switching to a dashboard perspective
+		 */
+		enableTheme() { }
+
+		/**
+		 * @function ColorsAPI#disableTheme
+		 * @description Called when leaving a dashboard perspecrtive
+		 */
+		disableTheme() { }
+
+		/**
+		 * @function ColorsAPI#getHexColorFromClassName
+		 * @description Get the hexValue of the color with className specified
+		 * @param {string} class name
+		 */
+		getHexColorFromClassName() { }
+
+		/**
+		 * @function ColorsAPI#isCustomColor
+		 * @description Checks to see if the color specified is a custom color
+		 * @param {*} color
+		 */
+		isCustomColor() { }
+
+		/**
+		 * @function ColorsAPI#addCustomColor
+		 * @description add a custom color to the model and return the colors class name
+		 * @param {*} color
+		 */
+		addCustomColor() { }
+
+		/**
+		 * @function ColorsAPI#getColorClassName
+		 * @description get the colors class name
+		 * @param {*} color
+		 */
+		getColorClassName() { }
+
+		/**
+		 * @function ColorsAPI#makeSureColorIsValidInModel
+		 * @description Given a model and a property name, make sure the color that's currently set is still valid for the current
+		 * dashboard color palette.  If it's not, update the color to something that's valid.  Also save the original value
+		 * so we can use it if the dashboard color set changes again.
+		 * @param {object} object.model - The model that we're checking
+		 * @param {string} object.propertyName - the property name in the model to check
+		 * @param {string} [object.valuePrefix] - If the property value has a hard coded prefix
+		 * @param {integer} [object.offset = 1] - If the color isn't valid, how far from the end should we pick the color
+		 * @param {object} [object.info] - undo/redo info if available
+		 */
+		makeSureColorIsValidInModel() { }
+
+		/**
+		 * @function ColorsAPI#prepareForColorModelChange
+		 * @description Should be called when the user sets a specific color.  We need to make sure we remove any of the 'original' properties
+		 * that were added by makeSureColorIsValidInModel
+		 * @param {*} payload
+		 * @param {string} the name of the property
+		 */
+		prepareForColorModelChange() { }
+
+		/**
+		 * @function ColorsAPI#on
+		 * @description Register an event to the colors feature
+		 * @param {string} eventName
+		 * @param {*} callbackFunction
+		 */
+		on() { }
+
+		/**
+		 * @function ColorsAPI#off
+		 * @description Deregister an event from the colors feature
+		 * @param {string} eventName
+		 * @param {*} callbackFunction
+		 */
+		off() { }
+
+
+	}
+
+	return ColorsAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

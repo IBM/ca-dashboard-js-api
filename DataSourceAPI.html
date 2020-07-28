@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: DataSourceAPI</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: DataSourceAPI</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>DataSourceAPI</h2>
+        
+            <div class="class-description"><p>implementation of the DataSourceAPI interface.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="deregisterUsage"><span class="type-signature"></span>deregisterUsage<span class="signature">(widgetId)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Should be called when a widget is deleted or no longer references a dataSource.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>widgetId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the widget which will be using this module. Used to keep track of usage.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Used to destroy the SourceModelAPI object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getAssetId"><span class="type-signature"></span>getAssetId<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the asset ID (Content Store ID) for the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Content store ID of the data source</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getId"><span class="type-signature"></span>getId<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the ID used to reference this data source internally.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The ID to use internally to reference this data source</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getLocalizedName"><span class="type-signature"></span>getLocalizedName<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the localized name of the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>Should use the synchronous call <a href="DataSourceAPI.html#getName"><code>DataSourceAPI#getName</code></a></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>the localized name of the data source</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getMetadataColumn"><span class="type-signature"></span>getMetadataColumn<span class="signature">(columnId)</span><span class="type-signature"> &rarr; {<a href="MetadataColumnAPI.html">MetadataColumnAPI</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns a <a href="MetadataColumnAPI.html"><code>MetadataColumnAPI</code></a> object.  Note, you must call <a href="DataSourceAPI.html#loadMetadata"><code>DataSourceAPI#loadMetadata</code></a> before making this call.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>columnId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The columnId to get the metadata column</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Returns a MetadataColumnAPI object.  Throws an exception if called before <a href="DataSourceAPI.html#loadMetadata"><code>DataSourceAPI#loadMetadata</code></a> is called</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getMetadataColumnList"><span class="type-signature"></span>getMetadataColumnList<span class="signature">(selector)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns all the metadataColumns from a dataSource that have the type specified by the selector</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>type of the metadataColumn. e.g. 'fact', 'attribute'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>List of metadataColumn objects</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getModule"><span class="type-signature"></span>getModule<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the data source module</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Data module</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getName"><span class="type-signature"></span>getName<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the localized name of the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Needs to be implemented synchronously</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>the localized name of the data source</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getSearchPath"><span class="type-signature"></span>getSearchPath<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the search path of the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>the search path of the data source</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getState"><span class="type-signature"></span>getState<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the state of the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>'ready', 'error' otherwise 'loaded'</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getType"><span class="type-signature"></span>getType<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get the type of the data source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The type of the data source (uploadedFile, dataSet2, package, ...)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="hasJoinedTables"><span class="type-signature"></span>hasJoinedTables<span class="signature">(tableName1, tableName2)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>verifies if the given table names have a joined relationship within the data source</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tableName1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tableName2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>True if the table names have a joined relationship</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isDataSourceUsed"><span class="type-signature"></span>isDataSourceUsed<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Check to see if the dataSource is referenced by a widget in the dashboard.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>true if the dataSource is being used by a widget otherwise false</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isDataSourceUsedByWidget"><span class="type-signature"></span>isDataSourceUsedByWidget<span class="signature">(widgetId)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Check to see if the dataSource is being referenced by a given widget.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>widgetId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the widget we want to check</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>True if the dataSource used by widget otherwise false</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isOlapPackage"><span class="type-signature"></span>isOlapPackage<span class="signature">()</span><span class="type-signature"> &rarr; {Boolen}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Check to see if the current data source references an OLAP package</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>True if the data source references an OLAP package</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolen</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="loadMetadata"><span class="type-signature"></span>loadMetadata<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Makes the necessary server calls to make metadata available on the client</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Promise that will resolve once the data source has been loaded</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="registerUsage"><span class="type-signature"></span>registerUsage<span class="signature">(widgetId)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Widgets should call this method registering themselves to the dataSource.  This is to enforce.
+that a dataSource that's still in use cannot be deleted.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>widgetId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the widget which will be using this module. Used to keep track of usage.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="relink"><span class="type-signature">(async) </span>relink<span class="signature">(newSourceInfo)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>relink to new datasource.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newSourceInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">DataSourceInfo</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Information (assetId, name, type, searchPath, ..) of the new source</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Promise that resolved once the dataSource has been relinked and the dashboard has been reloaded.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CallbackInvoker.html">CallbackInvoker</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="CanvasDnDAPI.html">CanvasDnDAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ContentActionsAPI.html">ContentActionsAPI</a></li><li><a href="ContentActionsProviderAPI.html">ContentActionsProviderAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentMenuAPI.html">ContentMenuAPI</a></li><li><a href="ContentProviderAPI.html">ContentProviderAPI</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="ContentViewAPI.html">ContentViewAPI</a></li><li><a href="CustomColorAPI.html">CustomColorAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DashboardStateAPI.html">DashboardStateAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataPointActionsProviderAPI.html">DataPointActionsProviderAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="DeprecatedConditionalFormattingAPI.html">DeprecatedConditionalFormattingAPI</a></li><li><a href="DeprecatedSmartAnnotationsAPI.html">DeprecatedSmartAnnotationsAPI</a></li><li><a href="DnDProviderAPI.html">DnDProviderAPI</a></li><li><a href="DOMProviderAPI.html">DOMProviderAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="expandCollapseAPI.html">expandCollapseAPI</a></li><li><a href="FiltersAPI.html">FiltersAPI</a></li><li><a href="ForecastAPI.html">ForecastAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="IconsAPI.html">IconsAPI</a></li><li><a href="InAppSlideoutAPI.html">InAppSlideoutAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="LiveWidgetDOMAPI.html">LiveWidgetDOMAPI</a></li><li><a href="LocalFilterDialog.html">LocalFilterDialog</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="NotificationAPI.html">NotificationAPI</a></li><li><a href="OnLoadFilterModifierAPI.html">OnLoadFilterModifierAPI</a></li><li><a href="PredictAPI.html">PredictAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PromptsAPI.html">PromptsAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryAPI.html">QueryAPI</a></li><li><a href="QueryDataItemAPI.html">QueryDataItemAPI</a></li><li><a href="QueryDefinitionModifierAPI.html">QueryDefinitionModifierAPI</a></li><li><a href="QueryDefinitionProviderAPI.html">QueryDefinitionProviderAPI</a></li><li><a href="QueryFactoryAPI.html">QueryFactoryAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryService2API.html">QueryService2API</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="RenderStepProvideAPI%25250AUse%252520by%252520feature%252520to%252520register%252520their%252520own%252520rendering%252520step%252520into%252520the%252520%25257B@link%252520RenderSequenceAPI%25257D.html">RenderStepProvideAPI
+Use by feature to register their own rendering step into the <a href="RenderSequenceAPI.html"><code>RenderSequenceAPI</code></a></a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlideoutAPI.html">SlideoutAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotActionsProviderAPI.html">SlotActionsProviderAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="SmartAnnotationsAPI.html">SmartAnnotationsAPI</a></li><li><a href="SmartRecommenderAPI.html">SmartRecommenderAPI</a></li><li><a href="SmartsExecutionAPI.html">SmartsExecutionAPI</a></li><li><a href="SmartsIndicatorAPI.html">SmartsIndicatorAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="ToolbarDockAPI.html">ToolbarDockAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="ViprUITestApi.html">ViprUITestApi</a></li><li><a href="VisDefinitionAPI.html">VisDefinitionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisDnDAPI.html">VisDnDAPI</a></li><li><a href="VisExpandModeAPI.html">VisExpandModeAPI</a></li><li><a href="VisIndicatorsAPI.html">VisIndicatorsAPI</a></li><li><a href="VisIndicatorsProviderAPI.html">VisIndicatorsProviderAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Interfaces</h3><ul><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="FullScreenAPI.html">FullScreenAPI</a></li><li><a href="SerializerAPI.html">SerializerAPI</a></li><li><a href="ToolbarAPI.html">ToolbarAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CREATED">CREATED</a></li><li><a href="global.html#DEFAULT">DEFAULT</a></li><li><a href="global.html#DETAIL">DETAIL</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#MINMAX">MINMAX</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

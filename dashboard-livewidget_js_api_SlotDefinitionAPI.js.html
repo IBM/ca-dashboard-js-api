@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-livewidget/js/api/SlotDefinitionAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-livewidget/js/api/SlotDefinitionAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class SlotsAPI
+ * @hideconstructor
+ * @classdesc implementation of the SlotDefinitionAPI interface
+ */
+define([], () => {
+	class SlotDefinitionAPI {
+
+		/**
+		 * @deprecated
+		 * @function SlotDefinitionAPI#toJSON
+		 * @description Get the JSON representation of the slot definition.
+		 * @public
+		 *
+		 * @return {Object} JSON prepresentation of the slot definition
+		 */
+		toJSON() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getDataset
+		 * @description Get the dataset.
+		 * @public
+		 *
+		 * @return {String} the dataset string representation
+		 */
+		getDataset() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getId
+		 * @description Get the slot id.
+		 * @public
+		 *
+		 * @return {String} the slot id
+		 */
+		getId() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getCaption
+		 * @description Get the slot caption.
+		 * @public
+		 *
+		 * @return {String} the slot caption
+		 */
+		getCaption() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getIcon
+		 * @description Get the slot icon name.
+		 * @public
+		 *
+		 * @return {String} the slot css icon name
+		 */
+		getIcon() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getType
+		 * @description Get the slot type.
+		 * @public
+		 *
+		 * @return {String} the slot type
+		 */
+		getType() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getSubType
+		 * @description Get the slot sub type, such as location, latitude, longitude etc.
+		 * @public
+		 *
+		 * @return {String} the slot sub type
+		 */
+		getSubType() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getGroupId
+		 * @description Get the slot group id.
+		 * @public
+		 *
+		 * @return {String} slot group id
+		 */
+		getGroupId() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getRole
+		 * @description Get the slot group id.
+		 * @public
+		 *
+		 * @return {String} slot role
+		 */
+		getRole() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isHiden
+		 * @description check the slot is hidden or not.
+		 * @public
+		 *
+		 * @return {boolean} true if slot is hidden, otherwise false
+		 */
+		isHidden() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isOptional
+		 * @description check the slot is optional or not.
+		 * @public
+		 *
+		 * @return {boolean} true if slot is optional, otherwise false
+		 */
+		isOptional() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getSort
+		 * @description Get the slot sort.
+		 * @public
+		 *
+		 * @return {String} the slot sort
+		 */
+		getSort() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getSortOrder
+		 * @description Get the slot sort order.
+		 * @public
+		 *
+		 * @return {Number} the slot sort order represented by number
+		 */
+		getSortOrder() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getAggregatedSortInfo
+		 * @description Get aggregated and sort info used when sort on aggregated fact values
+		 * @public
+		 * 
+		 * @return {Object} clientSideAggregatedAndSortInfo object in slot definition
+		 * @example
+		 * {
+		 * 	clientSideAggregatedAndSortInfo:{
+		 * 		mappedSlotCondition:[
+		 * 			'series'
+		 * 		],
+		 * 		groupOnColumnId :'categories'
+		 * 	}
+		 * }
+		 */
+		getAggregatedSortInfo() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isSortable
+		 * @description check the slot is sortable or not.
+		 * @public
+		 *
+		 * @return {boolean} true if slot is sortable otherwise false
+		 */
+		isSortable() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isStackItems
+		 * @description check if slot can be stacked on this the slot.
+		 * @public
+		 *
+		 * @return {boolean} true if slot can have stacked items, otherwise false
+		 */
+		isStackItems() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getMaxItems
+		 * @description Get the maximum number of items allowed on slot
+		 * @public
+		 *
+		 * @return {Number} maximum number of items allowed on slot
+		 */
+		getMaxItems() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isMultiMeasureSupported
+		 * @description check if slot can have multi measure.
+		 * @public
+		 *
+		 * @return {boolean} true if the slot supports multi measures, otherwise false
+		 */
+		isMultiMeasureSupported() {}
+
+		/**
+		 * @function SlotDefinitionAPI#isShapable
+		 * @description check if slot can support graphical shapes
+		 * @public
+		 *
+		 * @return {boolean} true if the slot supports shapes, otherwise false
+		 */
+		isShapable() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getCoachMark
+		 * @description Get coach mark object for the slot
+		 * @public
+		 *
+		 * @return {Object} coach mark object
+		 * @example
+		 * {
+		 * 		titleResource: 'coachMarkTitleSpiralTarget',
+		 * 		contentResource: 'coachMarkContentSpiralTarget',
+		 * 		mappedOnly: true,	// show only when the slot is mapped
+		 * 		showPopover: true	// show popover with the coach mark
+		 * }
+		 */
+		getCoachMark() {}
+
+		/**
+		 * @function SlotDefinitionAPI#getFormat
+		 * @description Get the slot format.
+		 * @public
+		 *
+		 * @return {Object} the slot formatting
+		 */
+		getFormat() {}
+
+	}
+
+
+	return SlotDefinitionAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

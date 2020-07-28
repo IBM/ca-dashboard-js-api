@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-livewidget/js/features/dashboard/dataSources/api/DataSourceAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-livewidget/js/features/dashboard/dataSources/api/DataSourceAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class DataSourceAPI
+ * @hideconstructor
+ *
+ * @classdesc implementation of the DataSourceAPI interface.
+ */
+define([], () => {
+	class DataSourceAPI {
+		/**
+		 * @function DataSourceAPI#destroy
+		 * @description Used to destroy the SourceModelAPI object
+		 */
+		destroy() { }
+
+		/**
+		 * @function DataSourceAPI#getId
+		 * @description Get the ID used to reference this data source internally.
+		 * @public
+		 *
+		 * @return {String} The ID to use internally to reference this data source
+		 */
+		getId() { }
+
+		/**
+		 * @function DataSourceAPI#getAssetId
+		 * @description Get the asset ID (Content Store ID) for the data source.
+		 * @public
+		 *
+		 * @return {String} Content store ID of the data source
+		 */
+		getAssetId() { }
+
+		/**
+		 * @function DataSourceAPI#getType
+		 * @description Get the type of the data source.
+		 * @public
+		 *
+		 * @return {String} The type of the data source (uploadedFile, dataSet2, package, ...)
+		 */
+		getType() { }
+
+		/**
+		 * @function DataSourceAPI#getLocalizedName
+		 * @description Get the localized name of the data source.
+		 * @public
+		 *
+		 * @return {String} the localized name of the data source
+		 * @deprecated Should use the synchronous call {@link DataSourceAPI#getName}
+		 */
+		getLocalizedName() { }
+
+		/**
+		 * @function DataSourceAPI#getName
+		 * @description Get the localized name of the data source.
+		 * @public
+		 *
+		 * @return {String} the localized name of the data source
+		 * @todo Needs to be implemented synchronously
+		 */
+		getName() { }
+
+		/**
+		 * @function DataSourceAPI#loadMetadata
+		 * @description Makes the necessary server calls to make metadata available on the client
+		 * @return {Promise} Promise that will resolve once the data source has been loaded
+		 */
+		loadMetadata() { }
+
+		/**
+		 * @function DataSourceAPI#getMetadataColumn
+		 * @description Returns a {@link MetadataColumnAPI} object.  Note, you must call {@link DataSourceAPI#loadMetadata} before making this call.
+		 * @public
+		 *
+		 * @param {String} columnId The columnId to get the metadata column
+		 *
+		 * @return {MetadataColumnAPI} Returns a MetadataColumnAPI object.  Throws an exception if called before {@link DataSourceAPI#loadMetadata} is called
+		 */
+		getMetadataColumn() {}
+
+		/**
+		 * @function DataSourceAPI#relink
+		 * @description relink to new datasource.
+		 * @public
+		 * @async
+		 *
+		 * @param {DataSourceInfo} newSourceInfo Information (assetId, name, type, searchPath, ..) of the new source
+		 *
+		 * @return {Promise} Promise that resolved once the dataSource has been relinked and the dashboard has been reloaded.
+		 */
+		relink() {}
+
+		/**
+		 * @function DataSourceAPI#editCalculation
+		 * @description edit a data source calculation action
+		 * @public
+		 * @async
+		 *
+		 * @param {array} array of data item ids to be use for the edit calculation action
+		 *
+		 * @return {Promise} Promise that resolved to a boolean once the edti action is completed or aborted
+		 */
+		editCalculation(itemIds) {
+			void(itemIds);
+		}
+
+		/**
+		 * @function DataSourceAPI#createCalculation
+		 * @description create a data source calculation action
+		 * @public
+		 * @async
+		 *
+		 * @param {array} array of data item ids to be use for the create calculation action
+		 *
+		 * @return {Promise} Promise that resolved to an array containing the new added calculation
+		 */
+		createCalculation(itemIds) {
+			void(itemIds);
+		}
+
+		/**
+		 * @function DataSourceAPI#registerUsage
+		 * @description Widgets should call this method registering themselves to the dataSource.  This is to enforce.
+		 * that a dataSource that's still in use cannot be deleted.
+		 * @public
+		 *
+		 * @param {String} widgetId The id of the widget which will be using this module. Used to keep track of usage.
+		 */
+		registerUsage() {}
+
+		/**
+		 * @function DataSourceAPI#deregisterUsage
+		 * @description Should be called when a widget is deleted or no longer references a dataSource.
+		 * @public
+		 *
+		 * @param {String} widgetId The id of the widget which will be using this module. Used to keep track of usage.
+		 */
+		deregisterUsage() {}
+
+		/**
+		 * @function DataSourceAPI#isDataSourceUsed
+		 * @description Check to see if the dataSource is referenced by a widget in the dashboard.
+		 * @public
+		 *
+		 * @return {Boolean} true if the dataSource is being used by a widget otherwise false
+		 */
+		isDataSourceUsed() { }
+
+		/**
+		 * @function DataSourceAPI#isDataSourceUsedByWidget
+		 * @description Check to see if the dataSource is being referenced by a given widget.
+		 * @public
+		 *
+		 * @param {String} widgetId The id of the widget we want to check
+		 *
+		 * @return {Boolean} True if the dataSource used by widget otherwise false
+		 */
+		isUsedBy() { }
+
+		/**
+		 * @function DataSourceAPI#isOlapPackage
+		 * @description Check to see if the current data source references an OLAP package
+		 * @return {Boolen} True if the data source references an OLAP package
+		 */
+		isOlapPackage() { }
+
+		/**
+		 * @function DataSourceAPI#getModule
+		 * @description Get the data source module
+		 * @return {Object} Data module
+		 */
+		getModule() {}
+	}
+
+	return DataSourceAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

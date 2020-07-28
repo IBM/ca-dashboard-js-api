@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-livewidget/js/api/DataItemAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-livewidget/js/api/DataItemAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class DataItemAPI
+ * @hideconstructor
+ * @classdesc implementation of the DataItemAPI interface.
+ */
+define([], () => {
+	class DataItemAPI {
+
+		/**
+		 * @description Return the unique id that identifies the given dataitem.
+		 *
+		 * @function DataItemAPI#getId
+		 * @public
+		 *
+		 * @return {String} id
+		 */
+		getId() { }
+
+		/**
+		 * @description Return the dataitem label.
+		 *
+		 * @function DataItemAPI#getLabel
+		 * @public
+		 *
+		 * @return {String} label
+		 */
+		getLabel() { }
+
+		/**
+		 * @description Return the item id that this data item reference. An item id is the metadata column id.
+		 *
+		 * @function DataItemAPI#getColumnId
+		 * @public
+		 *
+		 * @return {String} columnId
+		 */
+		getColumnId() { }
+
+
+
+		/**
+		 * @description Return the item data type.
+		 * @function DataItemAPI#getDataType
+		 * @public
+		 *
+		 * @return {String} dataType { 'string' | 'decimal' }
+		 */
+		getDataType() { }
+
+		/**
+		 * @description Return trun if the data item is a data or time type. Data or time types include: date, datetime, time, year.
+		 * @function DataItemAPI#isDateOrTimeType
+		 * @public
+		 *
+		 * @return {Boolean} isDateOrTimeType
+		 */
+		isDateOrTimeType() { }
+
+		/**
+		 * @description Return the type of the data item. The type can be either 'attribute' or 'fact'.
+		 * @function DataItemAPI#getType
+		 * @public
+		 *
+		 * @return {String} type
+		 */
+		getType() { }
+
+		/**
+		 * @description Return the dataitem aggregation type.
+		 * @function DataItemAPI#getAggregation
+		 * @public
+		 *
+		 * @return {String} aggregationType
+		 *
+		 */
+		getAggregation() { }
+
+
+		/**
+		 * @description Set the dataitem aggregation type.
+		 * @function DataItemAPI#setAggregation
+		 * @public
+		 *
+		 * @param {aggregation} aggregation
+		 * @param {SetOptions} options
+		 */
+		setAggregation(aggregation, options) {
+			void (aggregation);
+			void (options);
+		}
+
+		/**
+		 * @description Return true if the dataitem aggregation type was not explicitly set.
+		 * @function DataItemAPI#hasDefaultAggregation
+		 * @public
+		 *
+		 * @return {Boolean} hasDefaultAggregation
+		 *
+		 */
+		hasDefaultAggregation() { }
+
+
+		/**
+		 * @description Return true if the dataitem sort type was not explicitly set.
+		 * @function DataItemAPI#hasDefaultSort
+		 * @public
+		 *
+		 * @return {Boolean} hasDefaultSort
+		 *
+		 */
+		hasDefaultSort() { }
+
+		/**
+		 * @description Return true if the dataitem format type was not explicitly set.
+		 * @function DataItemAPI#hasDefaultFormat
+		 * @public
+		 *
+		 * @return {Boolean} hasDefaultFormat
+		 *
+		 */
+		hasDefaultFormat() { }
+
+		/**
+		 * @description Return the column metadata that is associated with this data item.
+		 *
+		 * @function DataItemAPI#getMetadataColumn
+		 * @public
+		 *
+		 * @return {MetadataColumnAPI} columnMetadata Return null if the metadata item is not available
+		 */
+		getMetadataColumn() { }
+
+
+		/**
+		 * @description Return the data format for this data item.
+		 * @function DataItemAPI#getFormat
+		 * @public
+		 *
+		 * @param {Object} options ignoreDefaultFormatting - Ignore any default formatting
+		 * @return {FormatSpec} return format spec
+		 */
+		getFormat(options) {
+			void (options);
+		}
+
+
+		/**
+		 * @description Set the format spec for the given data item.
+		 * @function DataItemAPI#setFormat
+		 * @public
+		 *
+		 * @param {FormatSpec} formatSpec
+		 * @param {SetOptions} options
+		 *
+		 */
+		setFormat(formatSpec, options) {
+			void (formatSpec);
+			void (options);
+		}
+
+		/**
+		 * @description Get the effective sort spec. Is there is a user sort set, then it is returned, otherwise, the default sort is returned.
+		 *
+		 * @function DataItemAPI#getSort
+		 * @public
+		 * @return {SortSpec}
+		 *
+		 * @example
+		 *  {
+		 *    type: String ('asc' | 'desc' | 'null'),
+		 *    priority: Number,
+		 *    by: String  ('caption' | 'value'),
+		 *    context: String (column id used for the sort context)
+		 *    custom: Object (specify sort overrides)
+		 *    custom.top: String[] (Use values of members to move to the top of the sorted list)
+		 *    custom.enabled: Boolean (indicate if custom sort is enabled)
+		 *  }
+		 *
+		 */
+		getSort() { }
+
+		/**
+		 * @description Get the top/bottom information that is set on the data item.
+		 * @function DataItemAPI#getTopBottom
+		 * @public
+		 * @example
+		 *  {
+		 *    type: String ('topcount' | 'toppercent' | 'bottomcount' | 'bottompercent'),
+		 *    value: Number,
+		 *    rank: boolean
+		 *    context: Object (with itemId and aggregate)
+		 *  }
+		 *
+		 * @return {TopBottomInfo}
+		 *
+		 */
+		getTopBottom() { }
+
+		/**
+		 * @description Get the top/bottom information that is set on the data item.
+		 * @function DataItemAPI#setTopBottom
+		 * @public
+		 *
+		 * @example
+		 *  {
+		 *		type: String ('topcount' | 'toppercent' | 'bottomcount' | 'bottompercent'),
+		 *		value: Number,
+		 *		rank: boolean
+		 *    context:  the measure (column id) can be used when the topbottom applied on the categories
+		 *  }
+		 *
+		 * @param {TopBottomInfo} topBottomInfo
+		 * @param {SetOptions} options
+		 *
+		 */
+		setTopBottom(topBottomInfo, options) {
+			void (topBottomInfo);
+			void (options);
+		}
+
+		/**
+		 * @description Return true if the data item is a hierarchy and we can drill down.
+		 * @function DataItemAPI#canDrillDown
+		 * @public
+		 *
+		 * @return {Boolean} canDrillDown
+		 */
+		canDrillDown() { }
+
+
+		/**
+		 * @description Drill down.
+		 *
+		 * @function DataItemAPI#drillDown
+		 * @public
+		 *
+		 * @param {String} value
+		 * @param {SetOptions} options
+		 *
+		 *
+		 */
+		drillDown(value, options) {
+			void (value);
+			void (options);
+		}
+
+		/**
+		 * @description Get the Drill down value (member id) if a drill down is set.
+		 *
+		 * @function DataItemAPI#getDrillDownValue
+		 * @public
+		 *
+		 * @return {String} drillDown value
+		 */
+		getDrillDownValue() {}
+
+
+		/**
+		 * @description Drill up.
+		 *
+		 * @function DataItemAPI#drillUp
+		 * @public
+		 *
+		 * @param {String} value
+		 * @param {SetOptions} options
+		 *
+		 *
+		 */
+		drillUp(value, options) {
+			void (value);
+			void (options);
+		}
+
+		/**
+		 * @description Get the Drill up value (member id) if a drill up is set.
+		 *
+		 * @function DataItemAPI#getDrillDownValue
+		 * @public
+		 *
+		 * @return {String} drillUp value
+		 */
+		getDrillUpValue() {}
+
+
+		/**
+		 * @description Clear the drill up or down selection
+		 *
+		 * @function DataItemAPI#clearDrill
+		 * @public
+		 *
+		 * @param {SetOptions} options
+		 */
+		clearDrill() {}
+
+		/**
+		 * @description Enable binning in the data item.
+		 * @function DataItemAPI#setBinning
+		 * @public
+		 *
+		 * @param {BinningSpec} binningSpec - null to clear the binning
+		 * @param {SetOptions} options
+		 *
+		 */
+		setBinning(binningSpec, options) {
+			void (binningSpec);
+			void (options);
+		}
+
+
+		/**
+		 * @description Get the binning json object if specified for this data item.
+		 * @function DataItemAPI#getBinning
+		 * @public
+		 *
+		 * @return {BinningSpec}
+		 */
+		getBinning() { }
+
+
+
+		/**
+		 * @description Set the type, sort-by method and priority of sort on the data item.
+		 *
+		 * @function DataItemAPI#setSort
+		 * @public
+		 * @param {SortSpec} sortSpec
+		 * @param {SetOptions} options
+		 *
+		 */
+		setSort(sortSpec, options) {
+			void (sortSpec);
+			void (options);
+		}
+	}
+
+	/**
+	 * @description Enum for all supported topbottom type.
+	 * @readonly
+	 * @enum {String}
+	 * @constant
+	 * @memberOf DataItemAPI
+	 */
+	DataItemAPI.TOPBOTTOM_TYPE = {
+		topcount : 'topcount',
+		toppercent : 'toppercent',
+		bottomcount : 'bottomcount',
+		bottompercent : 'bottompercent'
+	};
+	return DataItemAPI;
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

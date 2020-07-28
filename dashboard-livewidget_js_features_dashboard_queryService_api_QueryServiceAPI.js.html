@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: dashboard-livewidget/js/features/dashboard/queryService/api/QueryServiceAPI.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: dashboard-livewidget/js/features/dashboard/queryService/api/QueryServiceAPI.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Licensed Materials - Property of IBM
+ * IBM Business Analytics (C) Copyright IBM Corp. 2018, 2019
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ * @class QueryServiceAPI
+ * @hideconstructor
+ * @classdesc API class that is used to run queries.
+ */
+define([], () => {
+	class QueryServiceAPI {
+
+		/**
+		 * @function QueryServiceAPI#executeQuery
+		 * @description Execute query with query spec.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {Object} querySpec The query specification.
+		 * @param {String} senderId (optional) The unique string identifier of the the query sender
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		executeQuery() {}
+
+		/**
+		 * @function QueryServiceAPI#getDataItemValues
+		 * @description Get values of a column.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The column id
+		 * @param {Object} [filters] The filter spec
+		 * @param {String} [sort] The sort option. 'asc', 'desc' or 'none'
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getColumnValues() {}
+
+		/**
+		 * @function QueryServiceAPI#getColumnMinMaxValues
+		 * @description Get min max values of a column.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The column id
+		 * @param {Object} [filters] The filter spec
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getColumnMinMaxValues() {}
+
+		/**
+		 * @function QueryServiceAPI#getDataItemsMinMaxValues
+		 * @description Get min max values of given dataItems and projections.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {Object} dataItems The data items spec
+		 * @param {String[]} projections The array of projected data item unique IDs
+		 * @param {Object} [filters] The filter spec
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 * @example
+		 * getDataItemsMinMaxValues(
+		 * 'dataSourceId',
+		 * [{
+		 * 	'id': 'Sheet1.Product_line',
+		 * 	'itemId': 'Sheet1.Product_line',
+		 * 	'itemLabel': 'Product line'
+		 * 	},{
+		 * 	'id': 'Sheet1.Quantity',
+		 * 	'itemId': 'Sheet1.Quantity',
+		 * 	'itemLabel': 'Quantity',
+		 * 	'aggregate': 'sum'
+		 * 	},{
+		 * 	'id': 'Sheet1.Unit_cost',
+		 * 	'itemId': 'Quantity',
+		 * 	'itemLabel': 'Unit cost',
+		 * 	'aggregate': 'sum'
+		 * 	}],
+		 * [
+		 * 	'Sheet1.Quantity',
+		 * 	'Sheet1.Unit_cost'
+		 * ]).then(queryResultData => {});
+		 * The minmax query result will have 2 sets of minmax values, one for Sheet1.Quantity, and one for Sheet1.Unit_cost
+		 */
+		getDataItemsMinMaxValues() {}
+
+		/**
+		 * @function QueryServiceAPI#getRootMembers
+		 * @description Get root members of a hierarchy.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The hierarchy id
+		 * @param {Object} [filters] The filter spec
+		 * @param {Number} [rowLimit = 51] The number of rows to return
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getRootMembers() {}
+
+		/**
+		 * @function QueryServiceAPI#getChildren
+		 * @description Get children of a member.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The column id
+		 * @param {String} memberId The member id to get children
+		 * @param {Object} [filters] The filter spec
+		 * @param {Number} [rowLimit = 51] The number of rows to return
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getChildren() {}
+
+		/**
+		 * @function QueryServiceAPI#getChildren
+		 * @description Get siblings of a member.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The column id
+		 * @param {String} memberId The member id to get siblings
+		 * @param {Object} [filters] The filter spec
+		 * @param {Number} [rowLimit = 51] The number of rows to return
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getSiblings() {}
+
+		/**
+		 * @function QueryServiceAPI#getAscendants
+		 * @description Get ascendants of an array of members.
+		 * @public
+		 * @async
+		 *
+		 * @param {String} sourceId The data source Id
+		 * @param {String} itemId The hierarchy id
+		 * @param {String[]} memberIds An array of member IDs to get ascendants
+		 * @param {Object} [filters] The filter spec
+		 * @return {Promise&lt;QueryResultsAPI>} Returns a promise that will be resolved with a {@link QueryResultsAPI} object
+		 */
+		getAscendants() {}
+
+	}
+
+	return QueryServiceAPI;
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AlignAPI.html">AlignAPI</a></li><li><a href="AssetPrintAPI.html">AssetPrintAPI</a></li><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ChangeVisTypeActionAPI.html">ChangeVisTypeActionAPI</a></li><li><a href="CoachMarkAPI.html">CoachMarkAPI</a></li><li><a href="ColorsAPI.html">ColorsAPI</a></li><li><a href="ConditionalFormattingAPI.html">ConditionalFormattingAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentFactory.html">ContentFactory</a></li><li><a href="ContentServiceabilityAPI.html">ContentServiceabilityAPI</a></li><li><a href="CustomGroupActionAPI.html">CustomGroupActionAPI</a></li><li><a href="DashboardAPI.html">DashboardAPI</a></li><li><a href="DashboardServiceabilityAPI.html">DashboardServiceabilityAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointActionsAPI.html">DataPointActionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSourceAPI.html">DataSourceAPI</a></li><li><a href="DataSourcesAPI.html">DataSourcesAPI</a></li><li><a href="DecoratorAPI.html">DecoratorAPI</a></li><li><a href="EventGroupAPI.html">EventGroupAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="InternalDataQueryExecutionAPI.html">InternalDataQueryExecutionAPI</a></li><li><a href="InternalQueryServiceAPI.html">InternalQueryServiceAPI</a></li><li><a href="InternalRecommenderAPI.html">InternalRecommenderAPI</a></li><li><a href="InternalVisDefinitionsAPI.html">InternalVisDefinitionsAPI</a></li><li><a href="InternalVisualizationAPI.html">InternalVisualizationAPI</a></li><li><a href="MetadataColumnAPI.html">MetadataColumnAPI</a></li><li><a href="PrintAPI.html">PrintAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryModifierAPI.html">QueryModifierAPI</a></li><li><a href="QueryProviderAPI.html">QueryProviderAPI</a></li><li><a href="QueryServiceAPI.html">QueryServiceAPI</a></li><li><a href="RenderSequenceAPI.html">RenderSequenceAPI</a></li><li><a href="SavedPromptsAPI.html">SavedPromptsAPI</a></li><li><a href="SegmentAPI.html">SegmentAPI</a></li><li><a href="SlotActionsAPI.html">SlotActionsAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TaxonomyAPI.html">TaxonomyAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="VisDefinitionsAPI.html">VisDefinitionsAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li><li><a href="VizDefinitionAPI.html">VizDefinitionAPI</a></li><li><a href="WidgetAPI.html">WidgetAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONDITIONS_OPERATORS">CONDITIONS_OPERATORS</a></li><li><a href="global.html#INITIALIZED">INITIALIZED</a></li><li><a href="global.html#openApplication">openApplication</a></li><li><a href="global.html#RENDERED">RENDERED</a></li><li><a href="global.html#RENDERING">RENDERING</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.2</a> on Sat Jun 22 2019 17:31:27 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
