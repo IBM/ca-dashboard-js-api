@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: DataSetsAPI</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Interface: DataSetsAPI</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>DataSetsAPI</h2>
+        
+            <div class="class-description"><p>API class that is used to create, use, and delete data sets.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>dashboard.getFeature('DataSets')</code></pre>
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(assetId, columnIdList)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Creates a data set under the current dashboard with an array of column IDs.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>assetId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Asset ID of the data source used to create the data set.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>columnIdList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of column IDs used to create the data set</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Data set asset ID</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">(assetIdList)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Deletes the data sets with an array of data set asset IDs.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>assetIdList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Sting></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of asset IDs of the data sets to be deleted.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Resolves on successful deletion of data set and rejected in the case of an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="use"><span class="type-signature"></span>use<span class="signature">(assetId, widgetIdList)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Uses the dataset with asset ID to render the list of widgets. Note that this operation is not supported if the dataset was created from an OLAP source.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>assetId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Data set asset ID to use, resets to original datasource if not provided.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>widgetIdList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of widget IDs to re-render with the specified data set.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Resolves on successful use of data set and rejected in the case of an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AppFactory.html">AppFactory</a></li></ul><h3>Interfaces</h3><ul><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentStoreAPI.html">ContentStoreAPI</a></li><li><a href="DashboardCoreAPI.html">DashboardCoreAPI</a></li><li><a href="DashboardPreferencesAPI.html">DashboardPreferencesAPI</a></li><li><a href="DashboardSettingsAPI.html">DashboardSettingsAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointSelectionsAPI.html">DataPointSelectionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSetsAPI.html">DataSetsAPI</a></li><li><a href="FiltersAPI.html">FiltersAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryResultAPI.html">QueryResultAPI</a></li><li><a href="QueryResultsAPI.html">QueryResultsAPI</a></li><li><a href="RendererAPI.html">RendererAPI</a></li><li><a href="ResultItemAPI.html">ResultItemAPI</a></li><li><a href="SaveAPI.html">SaveAPI</a></li><li><a href="SerializerAPI.html">SerializerAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotDefinitionAPI.html">SlotDefinitionAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="UserProfileAPI.html">UserProfileAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li></ul><h3>Events</h3><ul><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:clearAll">CanvasAPI change:content:selections:clearAll</a></li><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:deselect">CanvasAPI change:content:selections:deselect</a></li><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:select">CanvasAPI change:content:selections:select</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:clearAll">ContentAPI change:selections:clearAll</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:deselect">ContentAPI change:selections:deselect</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:select">ContentAPI change:selections:select</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

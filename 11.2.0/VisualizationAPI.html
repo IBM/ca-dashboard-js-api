@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: VisualizationAPI</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Interface: VisualizationAPI</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>VisualizationAPI</h2>
+        
+            <div class="class-description"><p>API class that is used to control visualizations.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>content.getFeature('Visualization')</code></pre>
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getLocalFilters"><span class="type-signature"></span>getLocalFilters<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="FiltersAPI.html">FiltersAPI</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Gets the local filters.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="FiltersAPI.html">FiltersAPI</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getSlots"><span class="type-signature"></span>getSlots<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="SlotsAPI.html">SlotsAPI</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns the slots interface, which can be used to get and set information about the slots and data mappings in the visualization.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Slots object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="SlotsAPI.html">SlotsAPI</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getType"><span class="type-signature"></span>getType<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns the visulization type that is being used.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Type  (e.g. Bar, Area, etc)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// will return the string 'Bar'
+visualization.getType()</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="hasUnavailableMetadataColumns"><span class="type-signature"></span>hasUnavailableMetadataColumns<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns true if hasUnavailableMetadataColumns references a column that is no longer available.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="setType"><span class="type-signature"></span>setType<span class="signature">(type, options)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Sets the visualization type, where 'auto' will set the visualization to the recommended type.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>For example: auto, Bar, Area, etc.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SetOptions</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>- define the type enum (can be found in SmartsToVizMapping.js)</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AppFactory.html">AppFactory</a></li></ul><h3>Interfaces</h3><ul><li><a href="CanvasAPI.html">CanvasAPI</a></li><li><a href="ContentAPI.html">ContentAPI</a></li><li><a href="ContentStoreAPI.html">ContentStoreAPI</a></li><li><a href="DashboardCoreAPI.html">DashboardCoreAPI</a></li><li><a href="DashboardPreferencesAPI.html">DashboardPreferencesAPI</a></li><li><a href="DashboardSettingsAPI.html">DashboardSettingsAPI</a></li><li><a href="DataItemAPI.html">DataItemAPI</a></li><li><a href="DataPointSelectionsAPI.html">DataPointSelectionsAPI</a></li><li><a href="DataQueryExecutionAPI.html">DataQueryExecutionAPI</a></li><li><a href="DataSetsAPI.html">DataSetsAPI</a></li><li><a href="FiltersAPI.html">FiltersAPI</a></li><li><a href="GlobalFiltersAPI.html">GlobalFiltersAPI</a></li><li><a href="PropertiesAPI.html">PropertiesAPI</a></li><li><a href="PropertiesProviderAPI.html">PropertiesProviderAPI</a></li><li><a href="QueryResultAPI.html">QueryResultAPI</a></li><li><a href="QueryResultsAPI.html">QueryResultsAPI</a></li><li><a href="RendererAPI.html">RendererAPI</a></li><li><a href="ResultItemAPI.html">ResultItemAPI</a></li><li><a href="SaveAPI.html">SaveAPI</a></li><li><a href="SerializerAPI.html">SerializerAPI</a></li><li><a href="SlotAPI.html">SlotAPI</a></li><li><a href="SlotDefinitionAPI.html">SlotDefinitionAPI</a></li><li><a href="SlotsAPI.html">SlotsAPI</a></li><li><a href="StateAPI.html">StateAPI</a></li><li><a href="TransactionAPI.html">TransactionAPI</a></li><li><a href="UserProfileAPI.html">UserProfileAPI</a></li><li><a href="VisualizationAPI.html">VisualizationAPI</a></li></ul><h3>Events</h3><ul><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:clearAll">CanvasAPI change:content:selections:clearAll</a></li><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:deselect">CanvasAPI change:content:selections:deselect</a></li><li><a href="DataPointSelectionsAPI.html#event:CanvasAPIchange:content:selections:select">CanvasAPI change:content:selections:select</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:clearAll">ContentAPI change:selections:clearAll</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:deselect">ContentAPI change:selections:deselect</a></li><li><a href="DataPointSelectionsAPI.html#event:ContentAPIchange:selections:select">ContentAPI change:selections:select</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
